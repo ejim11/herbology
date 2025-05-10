@@ -27,7 +27,11 @@ const AccordionItem: FC<{
         <span className="flex-1 font-roboto text-left font-medium leading-[100%] text-[rgba(61,90,92,1)]">
           {title}
         </span>
-        {!isOpen ? <AiOutlinePlus /> : <FaMinus />}
+        {!isOpen ? (
+          <AiOutlinePlus className="text-primary-1 w-[2.4rem] h-[2.4rem]" />
+        ) : (
+          <FaMinus className="text-primary-1 w-[2.4rem] h-[2.4rem]" />
+        )}
       </motion.button>
       <AnimatePresence initial={false}>
         {isOpen && (
