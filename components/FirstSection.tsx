@@ -46,7 +46,10 @@ const FirstSection: React.FC<{
   }, [callBackFn, containerRef, options]);
 
   return (
-    <div className={containerClassName} ref={containerRef}>
+    <div
+      className={`${containerClassName}  w-full`}
+      ref={containerRef}
+    >
       {children}
     </div>
   );
