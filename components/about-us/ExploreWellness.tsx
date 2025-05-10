@@ -1,0 +1,20 @@
+import Link from "next/link";
+import React from "react";
+
+const ExploreWellness = () => {
+  return (
+    <section className="h-[85rem] bg-wellness bg-fixed flex flex-col items-center justify-end py-[8rem]">
+      <h1 className="text-[4.4rem] text-white font-cambon leading-[5.3rem] -tracking-[0.2rem] w-[30%] text-center uppercase">
+        Your path to confident, natural wellness starts here
+      </h1>
+      <Link
+        href={""}
+        className="bg-[rgba(255,127,80,1)] py-[1.8rem] px-[3.2rem] rounded-[1.6rem] mt-[2.4rem] text-white font-roboto"
+      >
+        Explore Wellness
+      </Link>
+    </section>
+  );
+};
+
+export default ExploreWellness;
