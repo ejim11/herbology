@@ -6,7 +6,7 @@ import image1 from "../../assets/about-us/image-1.png";
 const Hero = () => {
   return (
     <FirstSection containerClassName="flex min-h-[calc(100vh-8rem)]">
-      <div className="w-[50%] h-full">
+      <div className="w-[50%] h-[calc(100vh-8rem)]">
         <Image
           src={image1}
           alt="image 1 "
