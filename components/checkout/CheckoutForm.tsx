@@ -87,6 +87,11 @@ const CheckoutForm = () => {
   };
 
   const onSubmit: SubmitHandler<FormData> = async (data: FormData) => {
+    if (!userStateLocation) {
+      setUserStateLocationErrorText("Please enter state");
+      return;
+    }
+
     if (!address) {
       setAddressError("Please enter address");
       return;
