@@ -38,4 +38,18 @@ export const registrationOption = {
       message: "Valid phone number is required",
     },
   },
+  city: {
+    required: "City is required",
+    minLength: {
+      value: 2,
+      message: "City must have at least 2 characters",
+    },
+  },
+  lga: {
+    required: "LGA is required",
+    minLength: {
+      value: 2,
+      message: "LGA must have at least 2 characters",
+    },
+  },
 };
