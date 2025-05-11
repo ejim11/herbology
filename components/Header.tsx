@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../assets/logo-dark.png";
 import Link from "next/link";
 import Image from "next/image";
@@ -25,7 +25,21 @@ const headerNavLinks: { text: string; link: string }[] = [
 const Header = () => {
   const pathname = usePathname();
 
-  const { isHeaderSticky } = useContext(appContext);
+  const { isHeaderSticky, cartItems } = useContext(appContext);
+
+  const [scaleUp, setScaleUp] = useState<boolean>(false);
+
+  useEffect(() => {
+    setScaleUp(true);
+    const timer = setTimeout(() => {
+      setScaleUp(false);
+    }, 200);
+
+    return () => {
+      clearTimeout(timer);
+      setScaleUp(false);
+    };
+  }, [cartItems]);
 
   return (
     <header
@@ -64,8 +78,18 @@ const Header = () => {
           Hand Made herbal Wellness
         </p>
       </div>
-      <Link href={"/cart"} className="flex items-center text-primary-1">
-        <PiBag className="w-[2.4rem] h-[2.4rem] text-current mr-[.7rem]" />
+      <Link href={"/cart"} className="flex items-center text-primary-1 ">
+        <div className="relative">
+          <PiBag className="w-[2.4rem] h-[2.4rem] text-current mr-[.7rem]" />
+          <span
+            className={`${cartItems.length > 0 ? "flex " : "hidden"} ${
+              scaleUp ? "scale-125" : "scale-100"
+            } text-white -top-[1rem] -right-[0.2rem] bg-red-600 w-[2rem] h-[2rem] text-[1.2rem] rounded-full absolute items-center justify-center transition-all ease-in duration-200`}
+          >
+            {cartItems.length}
+          </span>
+        </div>
+
         <span className="text-[1.3rem] uppercase font-medium">cart</span>
       </Link>
     </header>
