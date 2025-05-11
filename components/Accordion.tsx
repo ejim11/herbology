@@ -10,7 +10,8 @@ const AccordionItem: FC<{
   expanded: number | boolean;
   setExpanded: Dispatch<SetStateAction<number | boolean>>;
   title: string;
-}> = ({ expanded, index, setExpanded, title, children }) => {
+  titleClassName?: string;
+}> = ({ expanded, index, setExpanded, title, children, titleClassName }) => {
   const isOpen = index === expanded;
 
   const onToggleDisplayEventInfoHandler = () => {
@@ -18,13 +19,15 @@ const AccordionItem: FC<{
   };
 
   return (
-    <div className={`  border-b py-[3rem] `}>
+    <div className={`  border-b py-[3rem] border-b-[rgba(0,0,0,0.15)] `}>
       <motion.button
         className="w-full  flex justify-between items-center "
         onClick={onToggleDisplayEventInfoHandler}
         initial={false}
       >
-        <span className="flex-1 font-roboto text-left font-medium leading-[100%] text-[rgba(61,90,92,1)]">
+        <span
+          className={`${titleClassName} flex-1 font-roboto text-left font-medium leading-[100%] text-[rgba(61,90,92,1)]`}
+        >
           {title}
         </span>
         {!isOpen ? (
