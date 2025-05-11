@@ -327,6 +327,12 @@ const CheckoutForm = () => {
               <p className="capitalize">total</p>
               <p>₦{formatAmount(String(subTotal + stateFee))}</p>
             </div>
+            <button
+              type="submit"
+              className="mt-[4rem] block w-full cursor-pointer bg-secondary-2 text-center py-[2rem] font-roboto text-[1.4rem] leading-[100%] tracking-[1%] rounded-[0.8rem] text-white uppercase"
+            >
+              Pay Now
+            </button>
           </div>
         ) : (
           <p>You have no cart items</p>
