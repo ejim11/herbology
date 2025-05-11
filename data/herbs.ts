@@ -37,7 +37,7 @@ export const herbs: HerbItemType[] = [
         price: 180000,
       },
     ],
-    slug: "FLUXH360+-ANTI-INFECTION SYRUP",
+    slug: "FLUXH360-ANTI-INFECTION-SYRUP",
     recommendation: [
       "For enhanced effectiveness and treatment, we recommend using this syrup in conjunction with our Premium Anti-Infection Capsules",
     ],
@@ -54,7 +54,7 @@ export const herbs: HerbItemType[] = [
       "This high-quality herbal product is suitable for both men and women, providing comprehensive support for faster recovery. ",
     ],
     price: 200000,
-    slug: "FLUXH360-ANTI-INFECTION CAPSULES",
+    slug: "FLUXH360-ANTI-INFECTION-CAPSULES",
     recommendation: [
       "For chronic or recurrent infections, we recommend using these capsules in combination with our Premium Anti-Infection Syrup to enhance overall effectiveness.",
     ],
@@ -70,7 +70,7 @@ export const herbs: HerbItemType[] = [
       "Fluxh360 Women’s Intimate Suppository Capsules are specialized vaginal care products formulated with boric, a naturally occurring mineral that promotes optimal vaginal health.",
       "These capsules effectively restore pH balance and combat common vaginal irritations, including yeast infections and bacterial vaginosis, while alleviating abnormal discharge, odor, and discomfort.",
     ],
-    slug: "FLUXH360-WOMENS-SUPPOSITORY-CAPSULES(BORIC)",
+    slug: "FLUXH360-WOMENS-SUPPOSITORY-CAPSULES-BORIC",
     price: 200000,
   },
   {
