@@ -76,8 +76,10 @@ const InputComponent: React.FC<InputProps> = (props) => {
       {props.label && (
         <label
           htmlFor={props.name}
-          className={`capitalize font-roboto text-[1.4rem] -tracking-[0.1rem]  mb-[.5rem] ${
-            props.labelTextColor ? props.labelTextColor : "text-black"
+          className={`capitalize font-roboto  -tracking-[0.1rem]  mb-[.5rem] ${
+            props.labelTextColor
+              ? props.labelTextColor
+              : "text-black text-[1.4rem]"
           }`}
         >
           {props.label}
@@ -101,13 +103,13 @@ const InputComponent: React.FC<InputProps> = (props) => {
           {...props.register(props.name, props.validation)}
           className={`${
             props.border ? props.border : "border rounded-lg  "
-          } bg-white placeholder:text-[rgba(143,143,143,1)] font-roboto py-[1.2rem] relative ${
-            props.pl ? props.pl : "pl-[4rem]"
-          } pr-3 ${props.width ? props.width : "w-full"} ${
+          } bg-white placeholder:text-[rgba(143,143,143,1)] placeholder:text-[1.4rem] font-roboto py-[1.2rem] relative ${
+            props.pl ? props.pl : "pl-[2rem]"
+          } pr-[2rem] ${props.width ? props.width : "w-full"} ${
             props.height && props.height
           } ${
             props.shadow && props.shadow
-          } focus:ring-0 focus:outline-hidden outline-hidden ring-0 ${getErrorClass()} md:w-full`}
+          } focus:ring-0 focus:outline-hidden outline-hidden ring-0 ${getErrorClass()} `}
         />
         {props.icon}
         {getPasswordIcon()}
