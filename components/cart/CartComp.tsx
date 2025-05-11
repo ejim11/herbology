@@ -6,6 +6,7 @@ import FirstSection from "../FirstSection";
 import { CartItem } from "@/store/appContextProvider";
 import CartItemComp from "./CartItem";
 import formatAmount from "@/utils/formatAmount";
+import Link from "next/link";
 
 const CartComp = () => {
   const { cartItems } = useContext(appContext);
@@ -49,12 +50,12 @@ const CartComp = () => {
                 ₦{formatAmount(String(total))}
               </p>
             </div>
-            <button
-              onClick={() => {}}
+            <Link
+              href={"/checkout"}
               className="mt-[4rem] block w-full cursor-pointer bg-secondary-2 text-center py-[2rem] font-roboto text-[1.4rem] leading-[100%] tracking-[1%] rounded-[0.8rem] text-white uppercase"
             >
               checkout
-            </button>
+            </Link>
           </div>
         </div>
       </FirstSection>
