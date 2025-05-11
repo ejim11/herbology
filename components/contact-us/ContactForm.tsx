@@ -67,7 +67,7 @@ const ContactUsForm = () => {
           pl="pl-[1rem]"
           containerWidth="w-[47%]"
           validation={registrationOption.firstName}
-          labelTextColor="text-[rgba(45,80,82,1)]"
+          labelTextColor="text-[rgba(45,80,82,1)] text-[1.2rem]"
         />
         <InputComponent
           placeholder={"Enter your last name"}
@@ -79,7 +79,7 @@ const ContactUsForm = () => {
           pl="pl-[1rem]"
           containerWidth="w-[47%]"
           validation={registrationOption.lastName}
-          labelTextColor="text-[rgba(45,80,82,1)]"
+          labelTextColor="text-[rgba(45,80,82,1)] text-[1.2rem]"
         />
       </div>
 
@@ -92,12 +92,12 @@ const ContactUsForm = () => {
         label="EMAIL"
         pl="pl-[1rem]"
         containerWidth="w-full"
-        labelTextColor="text-[rgba(45,80,82,1)]"
+        labelTextColor="text-[rgba(45,80,82,1)] text-[1.2rem]"
         validation={registrationOption.email}
       />
 
       <div className="flex flex-col w-full">
-        <label className="mb-[0.5rem] text-[1.4rem] text-[rgba(45,80,82,1)] font-roboto">
+        <label className="mb-[0.5rem] text-[1.2rem] text-[rgba(45,80,82,1)] font-roboto">
           MESSAGE
         </label>
         <textarea
@@ -109,7 +109,7 @@ const ContactUsForm = () => {
           onChange={(e: { target: { value: string } }) => {
             setMessage(e.target.value);
           }}
-          className="rounded-lg border bg-white placeholder:text-[rgba(143,143,143,1)]  font-roboto  border-[rgba(237,237,237,1)] resize-none focus:ring-0 focus:outline-none outline-none ring-0 p-[1rem] "
+          className="rounded-lg border bg-white placeholder:text-[1.4rem]  placeholder:text-[rgba(143,143,143,1)]  font-roboto  border-[rgba(237,237,237,1)] resize-none focus:ring-0 focus:outline-none outline-none ring-0 p-[1rem] "
         />
         <small>{msgError}</small>
       </div>
