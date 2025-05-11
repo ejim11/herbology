@@ -1,12 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import FirstSection from "../FirstSection";
 import Image from "next/image";
 import { HerbItemType } from "@/types/herbItem";
-import Link from "next/link";
 import formatAmount from "@/utils/formatAmount";
+import appContext from "@/store/appContext";
 
 const Hero = ({ herb }: { herb: HerbItemType }) => {
+  const { addItemToCart } = useContext(appContext);
+
   const price = herb.price
     ? herb.price
     : herb.volumesPrices && herb.volumesPrices[0].price;
@@ -64,12 +66,24 @@ const Hero = ({ herb }: { herb: HerbItemType }) => {
             )}
           </div>
         ) : null}
-        <Link
-          href="/cart"
-          className="mt-[4rem] block w-full bg-secondary-2 text-center py-[2rem] font-roboto text-[1.4rem] leading-[100%] tracking-[1%] rounded-[0.8rem] text-white"
+        <button
+          onClick={() => {
+            if (herb.volumesPrices && herb.volumesPrices.length > 0) {
+              addItemToCart({
+                ...herb,
+                volumesPrices: herb.volumesPrices.filter(
+                  (item) => item.price === itemPrice
+                ),
+              });
+              return;
+            }
+
+            addItemToCart(herb);
+          }}
+          className="mt-[4rem] block w-full cursor-pointer bg-secondary-2 text-center py-[2rem] font-roboto text-[1.4rem] leading-[100%] tracking-[1%] rounded-[0.8rem] text-white"
         >
           Add to cart
-        </Link>
+        </button>
       </div>
     </FirstSection>
   );
