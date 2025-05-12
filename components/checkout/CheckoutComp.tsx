@@ -5,7 +5,6 @@ const CheckoutComp = () => {
   return (
     <section className="flex w-full py-[7rem] px-[8rem] ">
       <CheckoutForm />
-      
     </section>
   );
 };
