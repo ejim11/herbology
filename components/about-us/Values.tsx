@@ -4,7 +4,7 @@ import React from "react";
 
 const Values = () => {
   return (
-    <section className=" bg-primary-1 py-[6.4rem] max-ssm:py-[4rem] flex flex-col max-sm:px-[2rem]">
+    <section className=" bg-primary-1 py-[6.4rem] flex flex-col max-sm:px-[2rem]">
       {valuesData.map(
         (value: { title: string; text: string; image: StaticImageData }) => (
           <div
