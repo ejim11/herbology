@@ -5,7 +5,7 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 const WhatsappComp = () => {
   return (
     <FloatingWhatsApp
-      phoneNumber={"+2347026692653"}
+      phoneNumber={"+2348107171280"}
       accountName={"Herbology"}
     />
   );
