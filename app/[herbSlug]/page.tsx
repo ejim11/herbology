@@ -1,4 +1,5 @@
 import HerbDetailsComp from "@/components/herb-details/HerbDetails";
+import Loading from "@/components/Loading";
 import { herbs } from "@/data/herbs";
 import { HerbItemType } from "@/types/herbItem";
 import { Metadata } from "next";
@@ -37,7 +38,7 @@ export default async function HerbDetails({ params }: { params: Params }) {
   const herb: HerbItemType = fetchProduct(herbSlug);
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loading />}>
       <HerbDetailsComp herb={herb} />
     </Suspense>
   );
