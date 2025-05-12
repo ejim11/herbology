@@ -17,6 +17,7 @@
   --breakpoint-smd: 700px;
   --breakpoint-sm: 600px;
   --breakpoint-ssm: 500px;
+  --breakpoint-vsm: 400px;
 }
 
 @layer utilities {

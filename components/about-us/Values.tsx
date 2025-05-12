@@ -22,7 +22,7 @@ const Values = () => {
                 {value.text}
               </p>
             </div>
-            <div className="w-[50%] max-md:w-[55%] max-sm:mt-[2rem] max-sm:w-full h-[70rem] max-sm:h-[55rem]">
+            <div className="w-[50%] max-md:w-[55%] max-sm:mt-[2rem] max-sm:w-full h-[70rem] max-sm:h-[45rem]">
               <Image
                 src={value.image}
                 alt={`${value.title} image`}
