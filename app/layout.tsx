@@ -27,6 +27,18 @@ const cambonLight = localFont({
 export const metadata: Metadata = {
   title: "Herbology",
   description: "Empowering Intimacy, Naturally",
+  metadataBase: new URL("https://herbology.vercel.app/"),
+  authors: [{ name: "Ejim Favour," }, { name: "Qrest Company" }],
+  openGraph: {
+    description: "Empowering Intimacy, Naturally",
+    type: "website",
+    url: "https://herbology.vercel.app/",
+    images: [
+      {
+        url: "https://nich-fashion.s3.us-east-2.amazonaws.com/Screenshot+2025-05-12+at+16.28.12.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
