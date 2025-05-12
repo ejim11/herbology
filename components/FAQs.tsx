@@ -7,28 +7,44 @@ const FAQs = () => {
 
   const faqs: { title: string; text: string }[] = [
     {
-      title: "How do I place an order?",
-      text: `Simply browse our collection, select your preferred hoodie, choose the size and color, and click "Add to Cart." Proceed to checkout and complete your payment.`,
+      title: "How do I use FLUXH360 Anti-Infection Syrup?",
+      text: "Take the recommended dosage of FLUXH360 Anti-Infection Syrup as indicated on the bottle, typically 1-2 tablespoons daily. For best results, combine with FLUXH360 Anti-Infection Capsules and consult a healthcare provider.",
+    },
+    {
+      title: "Are your herbal products safe for everyone?",
+      text: "Our products, like RESTORE Women’s Contraceptive Tea and INTIMED Syrups, are made with natural ingredients but may not be suitable for pregnant women, nursing mothers, or those with specific allergies. Always consult a doctor before use.",
     },
     {
       title: "What payment methods do you accept?",
-      text: "We accept all major credit/debit cards, PayPal, bank transfers, and digital wallets like Apple Pay and Google Pay.",
+      text: "We accept Paystack for secure payments, including major credit/debit cards and bank transfers. All transactions are processed safely in NGN.",
+    },
+    {
+      title: "How long does shipping take for herbal products?",
+      text: "Standard shipping within Nigeria takes 3-7 business days. International shipping varies by location, typically 7-14 business days. Express options are available at checkout.",
+    },
+    {
+      title: "Can I return or exchange a product?",
+      text: "We offer a 14-day return policy for unopened and unused herbal products in their original packaging. Contact our support team to initiate a return or exchange.",
+    },
+    {
+      title: "What are the benefits of RESTORE Probiotics Gummies?",
+      text: "RESTORE Advanced Probiotics Gummies support gut health, boost immunity, prevent vaginal infections, and enhance fertility. Each serving contains 50 billion CFUs for optimal results.",
+    },
+    {
+      title: "Can I combine multiple products for better results?",
+      text: "Yes, for enhanced effectiveness, we recommend combining products like FLUXH360 Anti-Infection Syrup with Anti-Infection Capsules or RESTORE Yoni Oil with Luxury Intimate Scrub, as noted in product recommendations.",
+    },
+    {
+      title: "How do I place an order for INTIMED Action Man Syrup?",
+      text: "Browse our website, select INTIMED Premium ACTION MAN Syrup, choose your quantity, and click 'Add to Cart.' Proceed to checkout, enter your details, and complete payment via Paystack.",
+    },
+    {
+      title: "Do your products have side effects?",
+      text: "Our herbal products, such as FLUXH360 Detox & Hormonal Tea, are crafted with natural ingredients and are generally safe. However, mild reactions may occur in rare cases. Discontinue use and consult a doctor if adverse effects occur.",
     },
     {
       title: "Can I modify or cancel my order after placing it?",
-      text: "Yes, you can modify or cancel your order within 24 hours of placing it by contacting our customer service team - after that window, changes may be limited once processing has begun.",
-    },
-    {
-      title: "What is your return policy?",
-      text: "We offer a hassle-free 30-day return policy on all unworn items with original tags attached and in their original packaging.",
-    },
-    {
-      title: "How long does shipping take?",
-      text: "Standard shipping takes 3-5 business days within the US, while express shipping delivers within 1-2 business days - international shipping varies by location.",
-    },
-    {
-      title: "Can I modify or cancel my order?",
-      text: "Orders can be modified or cancelled within 2 hours of placement by contacting our customer service team - after that, the order enters processing and cannot be changed.",
+      text: "You can modify or cancel your order within 4 hours of placement by contacting our customer support team. After this period, orders enter processing and cannot be changed.",
     },
   ];
 
