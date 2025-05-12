@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AppContextProvider from "@/store/appContextProvider";
+import WhatsappComp from "@/components/WhatsappComp";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -42,6 +43,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <WhatsappComp />
         </AppContextProvider>
       </body>
     </html>
