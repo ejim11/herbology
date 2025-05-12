@@ -45,9 +45,51 @@
 
   html {
     box-sizing: border-box;
-    /* 1rem = 10px */
-    font-size: 62.5%;
+    /* 1rem = 20px */
+    font-size: 125%;
     scroll-behavior: smooth !important;
+  }
+
+  @media screen and (max-width: 3000px) {
+    html {
+      /* 1rem = 16px */
+      font-size: 100%;
+    }
+  }
+
+  @media screen and (max-width: 2200px) {
+    html {
+      /* 1rem = 14px */
+      font-size: 87.5%;
+    }
+  }
+
+  @media screen and (max-width: 1800px) {
+    html {
+      /* 1rem = 12px */
+      font-size: 75%;
+    }
+  }
+
+  @media screen and (max-width: 1500px) {
+    html {
+      /* 1rem = 10px */
+      font-size: 62.5%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    html {
+      /* 1rem = 9px */
+      font-size: 56.25%;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    html {
+      /* 1rem = 8px */
+      font-size: 50%;
+    }
   }
 
   body {

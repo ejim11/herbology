@@ -56,7 +56,7 @@ const ContactUsForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-full">
-      <div className="flex justify-between">
+      <div className="flex justify-between max-sm:flex-wrap">
         <InputComponent
           placeholder={"Enter your first name"}
           type={"text"}
@@ -65,7 +65,7 @@ const ContactUsForm = () => {
           name={"firstName"}
           label="FIRST NAME"
           pl="pl-[1rem]"
-          containerWidth="w-[47%]"
+          containerWidth="w-[47%] max-sm:w-full"
           validation={registrationOption.firstName}
           labelTextColor="text-[rgba(45,80,82,1)] text-[1.2rem]"
         />
@@ -77,7 +77,7 @@ const ContactUsForm = () => {
           name={"lastName"}
           label="LAST NAME"
           pl="pl-[1rem]"
-          containerWidth="w-[47%]"
+          containerWidth="w-[47%] max-sm:w-full"
           validation={registrationOption.lastName}
           labelTextColor="text-[rgba(45,80,82,1)] text-[1.2rem]"
         />

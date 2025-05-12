@@ -29,13 +29,13 @@ const WhyChooseUs = () => {
 
   return (
     <div className="flex flex-col items-center text-center">
-      <h3 className="text-primary-1 font-cambon text-[4.8rem] leading-[6.4rem] -tracking-[0.2rem] mb-[1.6rem]">
+      <h3 className="text-primary-1 font-cambon text-[4.8rem] max-smd:text-[3rem] leading-[6.4rem] -tracking-[0.2rem] mb-[1.6rem]">
         Why Choose Us
       </h3>
       <p className="font-roboto leading-[2.4rem] text-[rgba(61,90,92,0.8)]">
         Experience the power of nature-backed intimacy care you can trust
       </p>
-      <div className="grid grid-cols-3 gap-x-[8rem] w-full mt-[6.4rem]">
+      <div className="grid grid-cols-3 max-xmd:grid-cols-2 max-xmd:gap-y-[3rem] gap-x-[8rem] max-2xl:gap-x-[4rem] max-xlg:gap-x-[3rem] max-xl:gap-x-[3rem] max-lg:gap-x-[2rem] w-full  mt-[6.4rem] max-sm:grid-cols-1">
         {data.map(
           (item: { icon: StaticImageData; title: string; text: string }) => (
             <div key={item.title} className="items-center flex flex-col">
@@ -49,7 +49,7 @@ const WhyChooseUs = () => {
                   className="w-full h-full"
                 />
               </div>
-              <p className="font-cambon-l leading-[2.9rem] mb-[1.6rem] text-[2.4rem] text-primary-1">
+              <p className="font-cambon-l leading-[2.9rem] mb-[1.6rem] text-[2.4rem] text-primary-1 max-smd:text-[2rem]">
                 {item.title}
               </p>
               <p className="font-roboto leading-[2.8rem] text-secondary-1">

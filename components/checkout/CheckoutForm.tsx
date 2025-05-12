@@ -170,14 +170,14 @@ const CheckoutForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-full flex justify-between"
+      className="w-full flex justify-between max-xmd:flex-wrap "
     >
-      <div className=" w-[50%] font-roboto">
+      <div className=" w-[50%] max-xmd:w-full max-xmd:mb-[3rem] font-roboto">
         <div className=" flex flex-col ">
           <h4 className="text-[2rem] text-secondary-2 leading-[100%] mb-[2.4rem] font-semibold">
             Contact
           </h4>
-          <div className="flex justify-between">
+          <div className="flex justify-between max-sm:flex-col">
             <InputComponent
               placeholder={"Enter your first name"}
               type={"text"}
@@ -186,7 +186,7 @@ const CheckoutForm = () => {
               name={"firstName"}
               label="FIRST NAME"
               pl="pl-[2rem]"
-              containerWidth="w-[48%]"
+              containerWidth="w-[48%] max-sm:w-full"
               validation={registrationOption.firstName}
               labelTextColor="text-secondary-1 text-[1.2rem]"
             />
@@ -198,7 +198,7 @@ const CheckoutForm = () => {
               name={"lastName"}
               label="LAST NAME"
               pl="pl-[2rem]"
-              containerWidth="w-[48%]"
+              containerWidth="w-[48%] max-sm:w-full"
               validation={registrationOption.lastName}
               labelTextColor="text-secondary-1 text-[1.2rem]"
             />
@@ -259,7 +259,7 @@ const CheckoutForm = () => {
               )}
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between max-sm:flex-col">
             <InputComponent
               placeholder={"Enter your city"}
               type={"text"}
@@ -269,7 +269,7 @@ const CheckoutForm = () => {
               labelTextColor="text-secondary-1 text-[1.2rem] uppercase"
               name={"city"}
               pl="pl-[2rem]"
-              containerWidth="w-[48%]"
+              containerWidth="w-[48%] max-sm:w-full"
               validation={registrationOption.city}
             />
             <InputComponent
@@ -279,7 +279,7 @@ const CheckoutForm = () => {
               error={errors}
               label="LGA"
               labelTextColor="text-secondary-1 text-[1.2rem] uppercase"
-              containerWidth="w-[48%]"
+              containerWidth="w-[48%] max-sm:w-full"
               name={"lga"}
               pl="pl-[2rem]"
               validation={registrationOption.lga}
@@ -304,7 +304,7 @@ const CheckoutForm = () => {
           </div>
         </div>
       </div>
-      <div className="w-[40%] bg-[rgba(250,250,250,1)] p-[3rem] h-max">
+      <div className="w-[40%] max-xl:w-[45%] max-xmd:w-full bg-[rgba(250,250,250,1)] p-[3rem] max-ssm:p-[1.5rem] h-max">
         {cartItems.length > 0 ? (
           <div>
             {cartItems.map((item: CartItem) => {

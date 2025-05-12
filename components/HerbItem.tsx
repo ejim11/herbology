@@ -19,7 +19,7 @@ const HerbItem = ({
   return (
     <Link
       href={`/${slug.toLowerCase()}`}
-      className="flex flex-col text-center font-roboto"
+      className="flex flex-col text-center font-roboto w-full"
     >
       <div className="w-full h-[50rem] rounded-[0.8rem] overflow-hidden">
         <Image

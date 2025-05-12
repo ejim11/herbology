@@ -6,6 +6,7 @@ import Image from "next/image";
 import { PiBag } from "react-icons/pi";
 import { usePathname } from "next/navigation";
 import appContext from "@/store/appContext";
+import { IoMenu } from "react-icons/io5";
 
 const headerNavLinks: { text: string; link: string }[] = [
   {
@@ -29,6 +30,15 @@ const Header = () => {
 
   const [scaleUp, setScaleUp] = useState<boolean>(false);
 
+  const [menuIsVisible, setMenuIsVisible] = useState<boolean>(false);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const closeMenuModal = (e: any) => {
+    if (e.target.dataset.close) {
+      setMenuIsVisible(false);
+    }
+  };
+
   useEffect(() => {
     setScaleUp(true);
     const timer = setTimeout(() => {
@@ -43,21 +53,34 @@ const Header = () => {
 
   return (
     <header
-      className={`h-[8rem] w-full flex items-center px-[8rem] bg-white justify-between font-roboto z-50  ${
+      className={`h-[8rem] w-full flex items-center px-[8rem] max-xl:px-[5rem] max-lg:px-[3rem] max-md:px-[2rem] bg-white justify-between max-sm:justify-self-auto font-roboto z-50  ${
         isHeaderSticky ? `fixed top-0 shadow-2xl    showHeader` : "relative "
       }`}
     >
-      <nav>
-        <ul className="flex items-center">
+      <nav
+        className={`max-sm:fixed max-sm:top-0 max-sm:bottom-0 max-sm:right-0 max-sm:left-0 max-sm:h-screen max-sm:w-full max-sm:bg-[rgba(0,0,0,0.7)] max-sm:z-[100] max-sm:transition-all max-sm:duration-150 max-sm:ease-in ${
+          menuIsVisible
+            ? "max-sm:translate-x-0 max-sm:opacity-100"
+            : "max-sm:-translate-x-[100%] max-sm:opacity-0"
+        }`}
+        data-close="close"
+        onClick={closeMenuModal}
+      >
+        <ul className="flex items-center max-sm:bg-primary-1 max-sm:w-[60%] max-sm:h-full max-sm:flex-col max-sm:p-[2rem] max-sm:items-start">
           {headerNavLinks.map((link: { text: string; link: string }) => (
-            <li key={link.text} className="mr-[4rem] last:mr-0">
+            <li
+              key={link.text}
+              className="mr-[4rem] max-md:mr-[2rem] last:mr-0 max-sm:w-full max-sm:mb-[1rem]"
+              data-close="close"
+            >
               <Link
                 href={link.link}
                 className={`${
                   pathname === link.link
-                    ? "border-b-primary-1"
-                    : " border-b-transparent"
-                } text-[1.3rem] uppercase font-medium block pb-[1rem] border-b transition-all duration-150 ease-in leading-[100%] text-primary-1`}
+                    ? "border-b-primary-1 max-sm:text-[rgba(255,127,80,1)] max-sm:border-b-[rgba(255,127,80,1)] "
+                    : " border-b-transparent max-sm:border-b-white max-sm:text-white "
+                } text-[1.3rem] uppercase font-medium block pb-[1rem] border-b transition-all duration-150 ease-in leading-[100%] text-primary-1 max-sm:py-[1.5rem]`}
+                data-close="close"
               >
                 {link.text}
               </Link>
@@ -78,7 +101,10 @@ const Header = () => {
           Hand Made herbal Wellness
         </p>
       </div>
-      <Link href={"/cart"} className="flex items-center text-primary-1 ">
+      <Link
+        href={"/cart"}
+        className="flex items-center text-primary-1 max-sm:ml-auto "
+      >
         <div className="relative">
           <PiBag className="w-[2.4rem] h-[2.4rem] text-current mr-[.7rem]" />
           <span
@@ -90,8 +116,19 @@ const Header = () => {
           </span>
         </div>
 
-        <span className="text-[1.3rem] uppercase font-medium">cart</span>
+        <span className="text-[1.3rem] uppercase font-medium max-sm:hidden">
+          cart
+        </span>
       </Link>
+      <button
+        type="button"
+        className="hidden max-sm:block ml-[1.5rem]"
+        onClick={() => {
+          setMenuIsVisible(true);
+        }}
+      >
+        <IoMenu className="w-[2.4rem] h-[2.4rem]" />
+      </button>
     </header>
   );
 };

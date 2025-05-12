@@ -49,11 +49,11 @@ const FAQs = () => {
   ];
 
   return (
-    <section className="items-center flex flex-col px-[8rem] py-[12rem]">
-      <h3 className="font-cambon text-[4.8rem] font-medium leading-[6.4rem] -tracking-[0.2rem]">
+    <section className="items-center flex flex-col px-[8rem] max-xl:px-[5rem] max-lg:px-[3rem] max-md:px-[2rem] max-lg:py-[6rem] max-xl:py-[8rem] py-[12rem]">
+      <h3 className="font-cambon text-[4.8rem] max-smd:text-[3rem] font-medium leading-[6.4rem] -tracking-[0.2rem]">
         FAQs
       </h3>
-      <div className="w-[70%] mt-[6rem]">
+      <div className="w-[70%] mt-[6rem] max-xl:mt-[3rem] max-xl:w-[75%] max-lg:w-[80%] max-xmd:w-[90%] max-smd:w-full">
         {faqs.map((faq: { title: string; text: string }, index: number) => (
           <AccordionItem
             key={faq.title}

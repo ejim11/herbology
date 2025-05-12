@@ -7,10 +7,10 @@ import FAQs from "../FAQs";
 
 const HomeComp = () => {
   return (
-    <main>
+    <main className="w-full flex flex-col">
       <Hero />
       <HerbsMeetIntimacy />
-      <section className="bg-[rgba(239,246,246,1)] px-[8rem] mt-[15rem] flex flex-col pb-[12rem] ">
+      <section className="bg-[rgba(239,246,246,1)] px-[8rem] max-xl:px-[5rem] max-lg:px-[3rem] max-md:px-[2rem] mt-[15rem] flex flex-col pb-[12rem] ">
         <LearnMore />
         <WhyChooseUs />
       </section>

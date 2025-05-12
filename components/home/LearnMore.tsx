@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const LearnMore = () => {
   return (
-    <div className="mt-[8rem] relative flex flex-col py-[7.2rem] mb-[5rem] min-h-[50rem] text-center w-[65%] mx-auto justify-end items-center">
+    <div className="mt-[8rem] relative flex flex-col py-[7.2rem] mb-[5rem] min-h-[50rem] text-center w-[65%] max-xl:w-[75%] max-lg:w-[85%] max-md:w-[95%] max-sm:w-full  mx-auto justify-end items-center">
       <div className="w-full h-[38.6rem] absolute -top-[18rem]">
         <Image
           src={learnMoreImg}
@@ -16,7 +16,7 @@ const LearnMore = () => {
           className="w-full h-full"
         />
       </div>
-      <p className="w-[80%] font-roboto">
+      <p className="w-[80%] font-roboto max-sm:w-full max-ssm:mt-[16rem]">
         We are dedicated to promoting intimate health and confidence through
         safe, effective, and all-natural remedies. Our herbal solutions are
         carefully curated to support the treatment of sexually transmitted

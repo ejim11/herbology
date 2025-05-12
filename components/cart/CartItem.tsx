@@ -21,7 +21,7 @@ const CartItemComp = ({ cartItem }: { cartItem: CartItem }) => {
 
   return (
     <div className="border-t border-t-[rgba(0,0,0,0.15)] flex py-[4rem]">
-      <div className="w-[20rem] h-[20rem] rounded-[0.5rem] overflow-hidden">
+      <div className="w-[20rem] h-[20rem] max-sm:w-[10rem] max-sm:h-[10rem] rounded-[0.5rem] overflow-hidden">
         <Image
           src={cartItem.item.image}
           alt={`${cartItem.item.name} image`}
@@ -50,7 +50,7 @@ const CartItemComp = ({ cartItem }: { cartItem: CartItem }) => {
           </p>
         </div>
         <div
-          className="flex w-max border border-[rgba(217,217,217,1)] overflow-hidden mt-auto rounded-[2.4rem] text-center "
+          className="flex w-max border border-[rgba(217,217,217,1)] overflow-hidden mt-auto rounded-[2.4rem] text-center max-sm:mt-[2rem] "
           onClick={increaseOrDecreaseCartItemQtyHandler}
         >
           <button

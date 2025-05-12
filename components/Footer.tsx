@@ -26,8 +26,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[rgba(11,26,27,1)] px-[8rem] pt-[8rem]">
-      <div className="flex justify-between">
+    <footer className="bg-[rgba(11,26,27,1)] px-[8rem] max-xl:px-[5rem] max-lg:px-[3rem] max-md:px-[2rem] max-lg:pt-[5rem] pt-[8rem]">
+      <div className="flex justify-between max-md:flex-col">
         <div>
           <div className="w-[26rem]">
             <Image
@@ -54,7 +54,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex gap-x-[12rem] text-white w-[55%] font-roboto">
+        <div className="flex gap-x-[12rem] max-xl:gap-x-[8rem] max-xmd:gap-x-[4rem] max-ssm:gap-x-[2rem]  text-white w-[55%] max-2xl:w-[65%] max-xmd:flex-1 max-md:w-full max-xmd:ml-[2rem] max-md:ml-0 max-md:mt-[3rem] font-roboto  ">
           {footerLinksData.map((link: FooterLinkData) => (
             <div key={link.title} className="flex-1">
               <p className="leading-[100%] text-[1.8rem]  mb-[3.2rem]">

@@ -21,8 +21,8 @@ const DescriptionAndRecommendation = ({ herb }: { herb: HerbItemType }) => {
   ].filter((item) => item.value);
 
   return (
-    <section className="bg-[rgba(249,251,251,1)] flex justify-center">
-      <div className="w-[70%] py-[9rem]">
+    <section className="bg-[rgba(249,251,251,1)] flex justify-center max-sm:px-[2rem]">
+      <div className="w-[70%] max-lg:w-[80%] max-xmd:w-[90%] max-sm:w-full  py-[9rem] max-sm:py-[4rem]">
         {data.map(
           (item: { title: string; value: any; list?: any }, index: number) => {
             return (

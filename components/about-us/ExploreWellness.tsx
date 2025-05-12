@@ -4,7 +4,7 @@ import React from "react";
 const ExploreWellness = () => {
   return (
     <section className="h-[85rem] bg-wellness bg-fixed flex flex-col items-center justify-end py-[8rem]">
-      <h1 className="text-[4.4rem] text-white font-cambon leading-[5.3rem] -tracking-[0.2rem] w-[30%] text-center uppercase">
+      <h1 className="text-[4.4rem] max-smd:text-[3.5rem] text-white font-cambon leading-[5.3rem] -tracking-[0.2rem] w-[30%] max-2xl:w-[40%] max-lg:w-[50%] max-md:w-[60%]  max-sm:w-[90%] text-center uppercase">
         Your path to confident, natural wellness starts here
       </h1>
       <Link

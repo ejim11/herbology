@@ -13,8 +13,8 @@ const HerbsMeetIntimacy = () => {
   );
 
   return (
-    <section className="px-[8rem] py-[12rem] flex flex-col items-center text-center bg-white">
-      <h2 className="text-[4.8rem] font-cambon font-medium text-primary-1">
+    <section className="px-[8rem] py-[12rem] max-xl:px-[5rem] max-lg:px-[3rem] max-md:px-[2rem] max-lg:py-[6rem] max-xl:py-[8rem] flex flex-col items-center text-center bg-white">
+      <h2 className="text-[4.8rem] max-smd:text-[3rem] font-cambon font-medium text-primary-1">
         Herbs Meet Intimacy
       </h2>
       <div className="flex items-center my-[3.2rem]">

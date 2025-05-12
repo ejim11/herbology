@@ -5,8 +5,8 @@ import image1 from "../../assets/about-us/image-1.png";
 
 const Hero = () => {
   return (
-    <FirstSection containerClassName="flex min-h-[calc(100vh-8rem)]">
-      <div className="w-[50%] h-[calc(100vh-8rem)]">
+    <FirstSection containerClassName="flex min-h-[calc(100vh-8rem)] max-sm:flex-wrap">
+      <div className="w-[50%] h-[calc(100vh-8rem)] max-sm:w-full max-sm:h-[55rem]">
         <Image
           src={image1}
           alt="image 1 "
@@ -16,11 +16,11 @@ const Hero = () => {
           className="w-full h-full"
         />
       </div>
-      <div className="w-[50%] flex flex-col justify-center px-[4.8rem] font-roboto">
+      <div className="w-[50%] max-sm:w-full  flex flex-col justify-center px-[4.8rem] max-xl:px-[3rem] font-roboto max-md:px-[2rem] py-[3rem]">
         <p className="text-[1.3rem] text-[rgba(61,90,92,1)] leading-[100%] uppercase">
           who we are
         </p>
-        <h3 className="font-cambon font-medium text-[4.8rem] leading-[5.6rem] -tracking-[0.rem] text-secondary-2 flex flex-col mt-[1.6rem] mb-[2.4rem]">
+        <h3 className="font-cambon font-medium text-[4.8rem] max-smd:text-[3rem] leading-[5.6rem] -tracking-[0.rem] text-secondary-2 flex flex-col mt-[1.6rem] mb-[2.4rem] max-sm:flex-row max-sm:flex-wrap">
           <span>Intimate Wellness,</span>
           <span>Powered by Nature</span>
         </h3>

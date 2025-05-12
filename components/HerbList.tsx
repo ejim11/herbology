@@ -4,7 +4,7 @@ import HerbItem from "./HerbItem";
 
 const HerbList = ({ herbs }: { herbs: HerbItemType[] }) => {
   return (
-    <section className="grid grid-cols-3 gap-x-[2rem] gap-y-[3.2rem]">
+    <section className="grid grid-cols-3 max-xmd:grid-cols-2 max-sm:grid-cols-1 gap-x-[2rem] gap-y-[3.2rem] w-full">
       {herbs.map((herb: HerbItemType) => (
         <HerbItem
           image={herb.image}
