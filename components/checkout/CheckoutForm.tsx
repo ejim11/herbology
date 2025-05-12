@@ -8,6 +8,8 @@ import { CartItem } from "@/store/appContextProvider";
 import Image from "next/image";
 import formatAmount from "@/utils/formatAmount";
 import { statesShippingFee } from "@/data/statesShippingFee";
+import { sendMessage } from "@/utils/sendMessage";
+import { useRouter } from "next/navigation";
 
 type FormData = {
   firstName: string;
@@ -19,7 +21,8 @@ type FormData = {
 };
 
 const CheckoutForm = () => {
-  const { cartItems } = useContext(appContext);
+  const router = useRouter();
+  const { cartItems, emptyCart } = useContext(appContext);
 
   const subTotal = cartItems
     .map((item: CartItem) => {
@@ -78,6 +81,9 @@ const CheckoutForm = () => {
       lga: "",
     });
     setAddress("");
+    setUserStateLocation("");
+    router.push("/");
+    emptyCart();
   };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -101,7 +107,37 @@ const CheckoutForm = () => {
       return;
     }
 
-    console.log(data);
+    const items = cartItems.map((item: CartItem) => {
+      const price = item.item.price
+        ? item.item.price
+        : item.item.volumesPrices && item.item.volumesPrices[0].price;
+
+      return {
+        name: `${item.item.title} ${item.item.name}`,
+        amount: price,
+        quantity: item.choosenQty,
+      };
+    });
+
+    const userDetails = {
+      name: `${data.firstName} ${data.lastName}`,
+      email: data.email,
+      shippingAddress: `${address}, ${data.lga}, ${data.city}, ${userStateLocation}`,
+    };
+
+    const payerStr = `Hello, I want to make a purchase. These are the details: \n\nFullname: ${
+      userDetails.name
+    }\nEmail: ${userDetails.email}\nShipping Details: ${
+      userDetails.shippingAddress
+    } \n\n ${items
+      .map(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (item: any) =>
+          `Item: ${item.name}\nAmount: ${item.amount}\nQuantity: ${item.quantity}\n\n`
+      )
+      .join(`\n`)}`;
+
+    sendMessage(payerStr);
 
     resetForm();
   };
