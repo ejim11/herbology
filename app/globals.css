@@ -79,6 +79,13 @@
     }
   }
 
+  @media screen and (max-height: 650px) {
+    html {
+      /* 1rem = 9px */
+      font-size: 56.25%;
+    }
+  }
+
   @media screen and (max-width: 700px) {
     html {
       /* 1rem = 9px */

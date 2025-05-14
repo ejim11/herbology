@@ -28,7 +28,7 @@ const HerbItem = ({
           priority
           width={500}
           height={800}
-          className="w-full h-full"
+          className="w-full h-full object-cover"
         />
       </div>
       <p className="text-secondary-2 font-medium leading-[100%] mt-[2.4rem] mb-[1.2rem]">

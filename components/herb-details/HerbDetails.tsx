@@ -8,7 +8,7 @@ import FAQs from "../FAQs";
 
 const HerbDetailsComp: FC<{ herb: HerbItemType }> = ({ herb }) => {
   return (
-    <main>
+    <main className="flex flex-col">
       <Hero herb={herb} />
       <DescriptionAndRecommendation herb={herb} />
       <TreatmentsCollection />

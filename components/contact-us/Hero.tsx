@@ -7,14 +7,14 @@ import ContactUsForm from "./ContactForm";
 const Hero = () => {
   return (
     <FirstSection containerClassName="flex min-h-[calc(100vh-8rem)]  max-sm:flex-wrap">
-      <div className="w-[50%] max-xmd:w-[45%]  h-[calc(100vh-8rem)] max-sm:w-full max-sm:h-[55rem]">
+      <div className="w-[50%] max-xmd:w-[45%]   max-sm:w-full max-sm:h-[55rem]">
         <Image
           src={image1}
           alt="image 1 "
           priority
           width={1000}
           height={1000}
-          className="w-full h-full"
+          className="w-full h-full max-xlg:object-cover"
         />
       </div>
       <div className="w-[50%] max-xmd:w-[55%] max-sm:w-full  px-[8rem] max-xl:px-[3rem] max-md:px-[2rem] flex flex-col  justify-center py-[3rem]">

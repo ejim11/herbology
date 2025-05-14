@@ -89,10 +89,9 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className="py-[3rem] border-t border-t-secondary-1 mt-[7rem]">
-        <p className="font-roboto text-[1.4rem] text-white leading-[100%]">
-          Copyright @ 2025, Herbology
-        </p>
+      <div className="py-[3rem] border-t border-t-secondary-1 mt-[7rem] justify-between font-roboto text-[1.4rem] text-white leading-[100%] flex items-center max-ssm:flex-col ">
+        <p className="max-ssm:mb-[2rem]">Copyright @ 2025, Herbology</p>
+        <p>Designed &Developed by Qrest Company</p>
       </div>
     </footer>
   );

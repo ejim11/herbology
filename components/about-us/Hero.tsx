@@ -5,18 +5,18 @@ import image1 from "../../assets/about-us/image-1.png";
 
 const Hero = () => {
   return (
-    <FirstSection containerClassName="flex min-h-[calc(100vh-8rem)] max-sm:flex-wrap">
-      <div className="w-[50%] h-[calc(100vh-8rem)] max-sm:w-full max-sm:h-[55rem]">
+    <FirstSection containerClassName="flex min-h-[calc(100vh-8rem)] max-smd:flex-wrap">
+      <div className="w-[50%]  max-smd:w-full max-smd:h-[55rem]">
         <Image
           src={image1}
           alt="image 1 "
           priority
           width={1000}
           height={1000}
-          className="w-full h-full"
+          className="w-full h-full max-xlg:object-cover "
         />
       </div>
-      <div className="w-[50%] max-sm:w-full  flex flex-col justify-center px-[4.8rem] max-xl:px-[3rem] font-roboto max-md:px-[2rem] py-[3rem]">
+      <div className="w-[50%] max-smd:w-full  flex flex-col justify-center px-[4.8rem] max-xl:px-[3rem] font-roboto max-md:px-[2rem] py-[3rem]">
         <p className="text-[1.3rem] text-[rgba(61,90,92,1)] leading-[100%] uppercase">
           who we are
         </p>

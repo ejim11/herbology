@@ -28,7 +28,7 @@ const CartItemComp = ({ cartItem }: { cartItem: CartItem }) => {
           priority
           width={300}
           height={300}
-          className="w-full h-full"
+          className="w-full h-full object-cover"
         />
       </div>
       <div className="w-full flex-1 ml-[3rem] flex  flex-col font-roboto">
