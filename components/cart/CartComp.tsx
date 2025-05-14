@@ -53,12 +53,14 @@ const CartComp = () => {
                 ₦{formatAmount(String(total))}
               </p>
             </div>
-            <Link
-              href={"/checkout"}
-              className="mt-[4rem] block w-full cursor-pointer bg-secondary-2 text-center py-[2rem] font-roboto text-[1.4rem] leading-[100%] tracking-[1%] rounded-[0.8rem] text-white uppercase"
-            >
-              checkout
-            </Link>
+            {cartItems.length > 0 && (
+              <Link
+                href={"/checkout"}
+                className="mt-[4rem] block w-full cursor-pointer bg-secondary-2 text-center py-[2rem] font-roboto text-[1.4rem] leading-[100%] tracking-[1%] rounded-[0.8rem] text-white uppercase"
+              >
+                checkout
+              </Link>
+            )}
           </div>
         </div>
       </FirstSection>
