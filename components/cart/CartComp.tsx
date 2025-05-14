@@ -1,12 +1,13 @@
 "use client";
 import React, { useContext } from "react";
-import TreatmentsCollection from "../TreatmentsCollection";
 import appContext from "@/store/appContext";
 import FirstSection from "../FirstSection";
 import { CartItem } from "@/store/appContextProvider";
 import CartItemComp from "./CartItem";
 import formatAmount from "@/utils/formatAmount";
 import Link from "next/link";
+import CategoryItems from "../CategoryItems";
+import { herbs } from "@/data/herbs";
 
 const CartComp = () => {
   const { cartItems } = useContext(appContext);
@@ -20,6 +21,8 @@ const CartComp = () => {
     })
     .map((val) => val.chosenQty * val.price)
     .reduce((acc, cur) => acc + cur, 0);
+
+  const index = Math.floor(Math.random() * 14);
 
   return (
     <main className="flex flex-col w-full">
@@ -59,7 +62,7 @@ const CartComp = () => {
           </div>
         </div>
       </FirstSection>
-      <TreatmentsCollection />
+      <CategoryItems herb={herbs[index]} />
     </main>
   );
 };
