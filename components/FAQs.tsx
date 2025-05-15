@@ -16,7 +16,7 @@ const FAQs = () => {
     },
     {
       title: "What payment methods do you accept?",
-      text: "We accept Paystack for secure payments, including major credit/debit cards and bank transfers. All transactions are processed safely in NGN.",
+      text: "We accept bank transfers. All transactions are processed safely in NGN.",
     },
     {
       title: "How long does shipping take for herbal products?",
