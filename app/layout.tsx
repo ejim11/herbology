@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AppContextProvider from "@/store/appContextProvider";
 import WhatsappComp from "@/components/WhatsappComp";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -56,6 +58,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <WhatsappComp />
+          <ToastContainer />
         </AppContextProvider>
       </body>
     </html>
