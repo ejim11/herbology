@@ -77,6 +77,10 @@ const Hero = ({ herb }: { herb: HerbItemType }) => {
                   (item) => item.price === itemPrice
                 ),
               });
+              toastSuccess(
+                `Item Added to Cart`,
+                <FaRegCircleCheck className="w-[2.3rem] h-[2.3rem] text-white" />
+              );
               return;
             }
 
