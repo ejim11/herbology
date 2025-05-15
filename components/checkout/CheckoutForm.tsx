@@ -7,9 +7,11 @@ import appContext from "@/store/appContext";
 import { CartItem } from "@/store/appContextProvider";
 import Image from "next/image";
 import formatAmount from "@/utils/formatAmount";
-import { statesShippingFee } from "@/data/statesShippingFee";
 import { sendMessage } from "@/utils/sendMessage";
 import { useRouter } from "next/navigation";
+import { toastSuccess } from "@/utils/toastFuncs";
+import { FaRegCircleCheck } from "react-icons/fa6";
+import { lagosMainlandLGAs } from "@/data/statesShippingFee";
 
 type FormData = {
   firstName: string;
@@ -40,6 +42,11 @@ const CheckoutForm = () => {
   const [userStateLocation, setUserStateLocation] = useState<string>("");
 
   const [userStateLocationErrorText, setUserStateLocationErrorText] =
+    useState<string>("");
+
+  const [userLGALocation, setUserLGALocation] = useState<string>("");
+
+  const [userLGALocationErrorText, setUserLGALocationErrorText] =
     useState<string>("");
 
   const [stateFee, setStateFee] = useState(0);
@@ -92,9 +99,20 @@ const CheckoutForm = () => {
     setUserStateLocation(e.target.value);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const onChangeUserLGALocationHandler = (e: any) => {
+    if (e.target.value) setUserLGALocationErrorText("");
+    setUserLGALocation(e.target.value);
+  };
+
   const onSubmit: SubmitHandler<FormData> = async (data: FormData) => {
     if (!userStateLocation) {
       setUserStateLocationErrorText("Please enter state");
+      return;
+    }
+
+    if (!userLGALocation) {
+      setUserLGALocationErrorText("Please enter LGA");
       return;
     }
 
@@ -137,6 +155,11 @@ const CheckoutForm = () => {
       )
       .join(`\n`)}`;
 
+    toastSuccess(
+      `Redirecting to Whatsapp`,
+      <FaRegCircleCheck className="w-[2.3rem] h-[2.3rem] text-color-primary-1" />
+    );
+
     sendMessage(payerStr);
 
     resetForm();
@@ -148,11 +171,16 @@ const CheckoutForm = () => {
 
     if (userStateLocation) {
       timer = setTimeout(() => {
-        const state = statesShippingFee.filter((item) =>
-          item.state.toLowerCase().includes(userStateLocation.toLowerCase())
-        )[0];
-        if (state && state.state) {
-          setStateFee(state.fee);
+        if (userStateLocation) {
+          setStateFee(
+            userStateLocation.toLowerCase().includes("lagos")
+              ? lagosMainlandLGAs
+                  .map((text: string) => text.toLowerCase())
+                  .includes(userLGALocation)
+                ? 4000
+                : 7000
+              : 12000
+          );
         } else {
           setStateFee(0);
         }
@@ -165,7 +193,7 @@ const CheckoutForm = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [userStateLocation]);
+  }, [userLGALocation, userStateLocation]);
 
   return (
     <form
@@ -272,18 +300,34 @@ const CheckoutForm = () => {
               containerWidth="w-[48%] max-sm:w-full"
               validation={registrationOption.city}
             />
-            <InputComponent
-              placeholder={"Enter your LGA"}
-              type={"text"}
-              register={register}
-              error={errors}
-              label="LGA"
-              labelTextColor="text-secondary-1 text-[1.2rem] uppercase"
-              containerWidth="w-[48%] max-sm:w-full"
-              name={"lga"}
-              pl="pl-[2rem]"
-              validation={registrationOption.lga}
-            />
+            <div className="w-[48%] max-sm:w-full flex flex-col mb-[2rem]">
+              <label
+                htmlFor="lga"
+                className="uppercase   mb-[.5rem] text-[1.2rem]"
+              >
+                LGA
+              </label>
+              <div className="w-full flex flex-col">
+                <input
+                  type="text"
+                  name="lga"
+                  id="lga"
+                  placeholder="Enter your lga"
+                  value={userLGALocation}
+                  onChange={onChangeUserLGALocationHandler}
+                  className={`${
+                    userLGALocationErrorText
+                      ? "border-red-500 text-red-500"
+                      : "border-[rgba(237,237,237,1)]"
+                  } px-[2rem] py-[1.2rem] placeholder:text-[1.4rem] placeholder:text-[rgba(143,143,143,1)] bg-white border w-full ring-0 outline-none focus:ring-0 rounded-lg focus:outline-none `}
+                />
+                {userLGALocationErrorText && (
+                  <small className="text-red-500 mt-[0.5rem]">
+                    {userLGALocationErrorText}
+                  </small>
+                )}
+              </div>
+            </div>
           </div>
           <div className="flex flex-col w-full">
             <label className="mb-[0.5rem] text-[1.2rem] text-secondary-2 uppercase font-roboto">
