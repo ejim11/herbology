@@ -9,7 +9,9 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 import { toastSuccess } from "@/utils/toastFuncs";
 
 const Hero = ({ herb }: { herb: HerbItemType }) => {
-  const { addItemToCart } = useContext(appContext);
+  const { addItemToCart, cartItems } = useContext(appContext);
+
+  console.log(cartItems);
 
   const price = herb.price
     ? herb.price
@@ -71,11 +73,15 @@ const Hero = ({ herb }: { herb: HerbItemType }) => {
         <button
           onClick={() => {
             if (herb.volumesPrices && herb.volumesPrices.length > 0) {
+              const volumeItem = herb.volumesPrices.filter(
+                (item) => item.price === itemPrice
+              );
+
               addItemToCart({
                 ...herb,
-                volumesPrices: herb.volumesPrices.filter(
-                  (item) => item.price === itemPrice
-                ),
+                name: `${herb.name} ${volumeItem[0].volume}`,
+
+                volumesPrices: volumeItem,
               });
               toastSuccess(
                 `Item Added to Cart`,
