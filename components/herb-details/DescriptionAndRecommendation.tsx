@@ -57,9 +57,9 @@ const DescriptionAndRecommendation = ({ herb }: { herb: HerbItemType }) => {
                               key={text}
                               className="flex items-center mb-[1rem] last:mb-0"
                             >
-                              <SiCheckio className="w-[2.4rem] h-[2.4rem] mr-[1rem]" />
+                              <SiCheckio className="w-[2.4rem] h-[2.4rem] mr-[1rem] text-primary-1" />
 
-                              <span className="text-[rgba(123,132,135,1)]">
+                              <span className="text-[rgba(123,132,135,1)] flex-1">
                                 {text}
                               </span>
                             </li>
