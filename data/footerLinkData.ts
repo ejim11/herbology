@@ -13,10 +13,6 @@ export const footerLinksData: FooterLinkData[] = [
         link: "/shipping-policy",
       },
       {
-        text: "Returns & Refunds",
-        link: "/",
-      },
-      {
         text: "Privacy Policy",
         link: "/privacy",
       },
