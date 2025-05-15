@@ -3,6 +3,8 @@ import { herbs } from "@/data/herbs";
 import React, { useState } from "react";
 import HerbList from "../HerbList";
 import { HerbItemType } from "@/types/herbItem";
+import { toastSuccess } from "@/utils/toastFuncs";
+import { FaRegCircleCheck } from "react-icons/fa6";
 
 const filters: string[] = ["treatment", "aphrodisiacs", "intimate-care"];
 const HerbsMeetIntimacy = () => {
@@ -24,12 +26,16 @@ const HerbsMeetIntimacy = () => {
             key={filter}
             onClick={() => {
               setHerbFilter(filter);
+              toastSuccess(
+                `${filter} category`,
+                <FaRegCircleCheck className="w-[2.3rem] h-[2.3rem] text-color-primary-1" />
+              );
             }}
             className={`${
               herbFilter === filter
                 ? "text-[rgba(61,90,92,1)] border-[rgba(61,90,92,1)]"
                 : "text-[rgba(143,168,168,1)] border-transparent"
-            } mr-[2.4rem] last:mr-0 uppercase pb-[1.6rem] border-b cursor-pointer transition-all duration-150 ease-in`}
+            } mr-[2.4rem] font-bold hover:text-primary-1  last:mr-0 uppercase pb-[1.6rem] border-b cursor-pointer transition-all duration-150 ease-in`}
           >
             {filter}
           </button>
