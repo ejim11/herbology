@@ -18,7 +18,7 @@ export const footerLinksData: FooterLinkData[] = [
       },
       {
         text: "Privacy Policy",
-        link: "/",
+        link: "/privacy",
       },
     ],
   },
