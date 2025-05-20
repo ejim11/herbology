@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
-import logo from "../assets/logo-dark.png";
+import logo from "../assets/logo-dark.svg";
 import Link from "next/link";
 import Image from "next/image";
 import { PiBag } from "react-icons/pi";
@@ -53,12 +53,15 @@ const Header = () => {
 
   return (
     <header
-      className={`h-[8rem] w-full flex items-center px-[8rem] max-xl:px-[5rem] max-lg:px-[3rem] max-md:px-[2rem] bg-white justify-between max-sm:justify-self-auto font-roboto z-50  ${
+      className={`h-[8rem] w-full flex items-center px-[8rem] max-xl:px-[5rem] max-lg:px-[3rem] max-md:px-[2rem] bg-white max-sm:justify-self-auto font-roboto z-50  ${
         isHeaderSticky ? `fixed top-0 shadow-2xl    showHeader` : "relative "
       }`}
     >
+      <div className="w-[26rem]">
+        <Image src={logo} alt="logo image" priority className="w-full h-full" />
+      </div>
       <nav
-        className={`max-sm:fixed max-sm:top-0 max-sm:bottom-0 max-sm:right-0 max-sm:left-0 max-sm:h-screen max-sm:w-full max-sm:bg-[rgba(0,0,0,0.7)] max-sm:z-[100] max-sm:transition-all max-sm:duration-150 max-sm:ease-in ${
+        className={`max-sm:fixed max-sm:top-0 max-sm:bottom-0 max-sm:right-0 max-sm:left-0 max-sm:h-screen max-sm:w-full max-sm:bg-[rgba(0,0,0,0.7)] max-sm:z-[100] max-sm:transition-all max-sm:duration-150 max-sm:ease-in ml-auto mr-[5rem] ${
           menuIsVisible
             ? "max-sm:translate-x-0 max-sm:opacity-100"
             : "max-sm:-translate-x-[100%] max-sm:opacity-0"
@@ -88,19 +91,6 @@ const Header = () => {
           ))}
         </ul>
       </nav>
-      <div className="flex flex-col items-center text-center">
-        <div className="w-[26rem]">
-          <Image
-            src={logo}
-            alt="logo image"
-            priority
-            className="w-full h-full"
-          />
-        </div>
-        <p className="text-[.75rem] mt-[.4rem] leading-[0.6rem] uppercase">
-          Hand Made herbal Wellness
-        </p>
-      </div>
       <Link
         href={"/cart"}
         className="flex items-center text-primary-1 max-sm:ml-auto "
