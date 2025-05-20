@@ -225,7 +225,7 @@ export const herbs: HerbItemType[] = [
   },
   {
     image: FLUXH360WOMENSINTIMATEWASH,
-    title: "FLUXH360",
+    title: "RESTORE",
     name: "WOMEN’S INTIMATE WASH",
     category: HerbCat.INTIMATECARE,
     description:
