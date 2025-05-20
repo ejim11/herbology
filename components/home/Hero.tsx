@@ -4,21 +4,27 @@ import FirstSection from "../FirstSection";
 
 const Hero = () => {
   return (
-    <FirstSection containerClassName="bg-hero min-h-[calc(100vh-8rem)] w-full flex flex-col items-center justify-end py-[6.4rem] max-xmd:px-[3rem] max-md:px-[2rem] ">
-      <h1 className="font-cambon text-[7.6rem] max-smd:text-[4.5rem] text-white italic font-medium leading-[8.1rem] -tracking-[0.2rem] flex flex-col text-center ">
-        <span>Empowering Intimacy,</span>
-        <span>Naturally</span>
-      </h1>
-      <p className="font-roboto text-[2rem] text-[rgba(255,255,255,0.8)] leading-[2.9rem] font-light tracking-[0.1rem] mt-[1.6rem] text-center">
-        Natural treatments for STIs and intimate wellness, made with love and
-        herbs.
-      </p>
-      <Link
-        href={""}
-        className="bg-[rgba(255,127,80,1)] py-[1.8rem] px-[3.2rem] rounded-[1.6rem] mt-[2.4rem] text-white font-roboto"
-      >
-        Explore Wellness
-      </Link>
+    <FirstSection containerClassName="bg-hero min-h-[calc(100vh-8rem)] w-full flex  ">
+      <div className=" flex flex-col justify-center px-[8rem]   py-[6.4rem] max-xmd:px-[3rem] max-md:px-[2rem] bg-[rgba(0,0,0,0.2)]min-h-[calc(100vh-8rem)] w-full">
+        <div className="w-[45%]">
+          <p className="text-[rgba(255,127,80,1)] font-roboto uppercase text-[1.3rem] tracking-[3%] mb-[1.6rem]">
+            Shop organic remedies for a healthier you.
+          </p>
+          <h1 className="font-cambon  text-[7.6rem] max-smd:text-[4.5rem] text-white italic font-medium leading-[8.1rem] -tracking-[0.2rem] mb-[3.7rem] ">
+            Feel Better, Naturally
+          </h1>
+          <p className="font-roboto text-[2rem] text-[rgba(255,255,255,0.7)] leading-[2.9rem] font-light tracking-[0.1rem] mb-[3.2rem]">
+            Explore our carefully curated collection of herbal products and
+            experience pure, organic wellness
+          </p>
+          <Link
+            href={""}
+            className="bg-[rgba(255,127,80,1)] py-[1.8rem] px-[3.2rem] rounded-[1.6rem] mt-[2.4rem] w-max text-white font-roboto"
+          >
+            Explore Wellness
+          </Link>
+        </div>
+      </div>
     </FirstSection>
   );
 };
