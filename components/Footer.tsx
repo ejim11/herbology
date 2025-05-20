@@ -39,8 +39,8 @@ const Footer = () => {
               className="w-full h-full"
             />
           </div>
-          <p className="text-[rgba(216,218,219,1)] text-[1.4rem] font-roboto tracking-[4%] leading-[100%] mt-[1.6rem]">
-            Hand Made herbal Wellness
+          <p className="text-[rgba(216,218,219,1)] text-[0.8rem] font-roboto tracking-[4%] leading-[100%] mt-[0.3rem] ml-[5.4rem] ">
+            INTIMATE NATURAL WELLNESS
           </p>
           <div className="mt-[3.2rem] flex">
             {mediaLinksData.map((item: { icon: ReactNode; link: string }) => (
