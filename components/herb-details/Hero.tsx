@@ -21,8 +21,8 @@ const Hero = ({ herb }: { herb: HerbItemType }) => {
   const [itemPrice, setItemPrice] = useState<number>(price || 0);
 
   return (
-    <FirstSection containerClassName="flex min-h-[calc(100vh-8rem)] max-sm:flex-col">
-      <div className="w-[60%]  max-xl:w-[55%] max-lg:w-[50%] max-md:w-[45%]  max-sm:w-full h-[125vh] max-sm:h-[55rem] ">
+    <FirstSection containerClassName="flex min-h-[calc(100vh-8rem)] max-smd:flex-col">
+      <div className="w-[60%]  max-xl:w-[55%] max-lg:w-[50%] max-md:w-[45%]  max-smd:w-full  hero-details ">
         <Image
           src={herb.image}
           alt={`${herb.name} image`}
@@ -32,7 +32,7 @@ const Hero = ({ herb }: { herb: HerbItemType }) => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="w-[40%] max-xl:w-[45%] max-lg:w-[50%] max-md:w-[55%]  max-sm:w-full max-sm:mt-[3rem] flex flex-col justify-center px-[5rem] max-xl:px-[3rem] max-md:px-[2rem] py-[4rem] ">
+      <div className="w-[40%] max-xl:w-[45%] max-lg:w-[50%] max-md:w-[55%]  max-smd:w-full max-sm:mt-[3rem] flex flex-col justify-center px-[5rem] max-xl:px-[3rem] max-md:px-[2rem] py-[4rem] ">
         <p className="text-[rgba(255,127,80,1)] capitalize mb-[1rem] text-[1.3rem] leading-[100%]">
           {herb.category}
         </p>

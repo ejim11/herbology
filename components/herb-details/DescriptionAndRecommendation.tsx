@@ -6,7 +6,7 @@ import AccordionItem from "../Accordion";
 import { SiCheckio } from "react-icons/si";
 
 const DescriptionAndRecommendation = ({ herb }: { herb: HerbItemType }) => {
-  const [expanded, setExpanded] = useState<boolean | number>(false);
+  const [expanded, setExpanded] = useState<boolean | number>(0);
 
   const data: { title: string; value: any; list?: any }[] = [
     {

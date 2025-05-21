@@ -5,12 +5,12 @@ import FirstSection from "../FirstSection";
 const Hero = () => {
   return (
     <FirstSection containerClassName="bg-hero min-h-[calc(100vh-8rem)] w-full flex  ">
-      <div className=" flex flex-col justify-center px-[8rem]   py-[6.4rem] max-xmd:px-[3rem] max-md:px-[2rem] bg-[rgba(0,0,0,0.2)]min-h-[calc(100vh-8rem)] w-full">
-        <div className="w-[45%]">
+      <div className=" flex flex-col justify-center px-[8rem]  max-xl:px-[5rem] max-lg:px-[3rem]   py-[6.4rem]  max-md:px-[2rem] bg-[rgba(0,0,0,0.2)]min-h-[calc(100vh-8rem)] w-full">
+        <div className="w-[45%] max-xmd:w-[55%] max-smd:w-full max-smd:text-center">
           <p className="text-[rgba(255,127,80,1)] font-roboto uppercase text-[1.3rem] tracking-[3%] mb-[1.6rem]">
             Shop organic remedies for a healthier you.
           </p>
-          <h1 className="font-cambon  text-[7.6rem] max-smd:text-[4.5rem] text-white italic font-medium leading-[8.1rem] -tracking-[0.2rem] mb-[3.7rem] ">
+          <h1 className="font-cambon  text-[7.6rem] max-smd:text-[6rem] text-white italic font-medium leading-[8.1rem] -tracking-[0.2rem] mb-[3.7rem] ">
             Feel Better, Naturally
           </h1>
           <p className="font-roboto text-[2rem] text-[rgba(255,255,255,0.7)] leading-[2.9rem] font-light tracking-[0.1rem] mb-[3.2rem]">

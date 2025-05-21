@@ -9,7 +9,7 @@ import HerbItem from "./HerbItem";
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
 
 const sliderBtnClassnName =
-  "bg-secondary-2 flex items-center  -top-[12rem]  justify-center w-[4.2rem] h-[4.2rem] rounded-[0.8rem] absolute  z-20     hover:bg-[rgba(27,61,63,0.5)] cursor-pointer transition-all duration-150 ease-in";
+  "bg-secondary-2 flex items-center  -top-[11rem]  justify-center w-[4.2rem] h-[4.2rem] rounded-[0.8rem] absolute  z-20     hover:bg-[rgba(27,61,63,0.5)] cursor-pointer transition-all duration-150 ease-in max-smd:hidden";
 
 function NextArrow(props: any) {
   const { onClick } = props;
@@ -48,12 +48,12 @@ const ProductsSlides = ({
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 850,
+        breakpoint: 950,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           autoplay: true,
-          autoplaySpeed: 2000,
+          autoplaySpeed: 4000,
         },
       },
       {
@@ -62,7 +62,7 @@ const ProductsSlides = ({
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
-          autoplaySpeed: 2000,
+          autoplaySpeed: 4000,
         },
       },
     ],
@@ -72,10 +72,10 @@ const ProductsSlides = ({
   };
 
   return (
-    <section className="px-[8rem] pt-[12rem] ">
+    <section className="px-[8rem] pt-[12rem] max-md:pt-[8rem]  max-xl:px-[5rem] max-lg:px-[3rem] max-md:px-[2rem] ">
       <div>
-        <div>
-          <h3 className="text-[4.8rem] font-cambon text-primary-1 mb-[1rem]">
+        <div className="max-smd:text-center">
+          <h3 className="text-[4.8rem] max-lg:text-[3.5rem] max-smd:text-[3rem] font-cambon text-primary-1 mb-[1rem]">
             {header}
           </h3>
           <p className="leading-[2rem] text-secondary-1 font-roboto">
@@ -86,7 +86,7 @@ const ProductsSlides = ({
       <div className="mt-[4.8rem]">
         <Slider {...settings}>
           {products.map((herb: HerbItemType) => (
-            <div key={herb.name} className="px-[1rem]">
+            <div key={herb.name} className="px-[1rem] max-smd:px-0">
               <HerbItem
                 image={herb.image}
                 name={herb.name}
