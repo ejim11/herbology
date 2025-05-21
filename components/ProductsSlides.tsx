@@ -112,7 +112,7 @@ const ProductsSlides = ({
       </div>
       <div className="hidden max-sm:flex flex-nowrap overflow-x-auto mt-[4.8rem]">
         {products.map((herb: HerbItemType) => (
-          <div key={herb.name} className="shrink-0 w-[33rem] mr-[3rem] ">
+          <div key={herb.name} className="shrink-0 w-[33rem] pr-[3rem] ">
             <HerbItem
               image={herb.image}
               name={herb.name}
