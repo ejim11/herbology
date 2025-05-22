@@ -93,7 +93,7 @@ const Header = () => {
       </nav>
       <Link
         href={"/cart"}
-        className="flex items-center text-primary-1 max-sm:ml-auto "
+        className="flex items-center text-primary-1 max-sm:ml-auto mb-[1rem] max-sm:mb-0 "
       >
         <div className="relative">
           <PiBag className="w-[2.4rem] h-[2.4rem] text-current mr-[.7rem]" />
@@ -106,9 +106,9 @@ const Header = () => {
           </span>
         </div>
 
-        <span className="text-[1.3rem] uppercase font-medium max-sm:hidden">
+        {/* <span className="text-[1.3rem] uppercase font-medium max-sm:hidden">
           cart
-        </span>
+        </span> */}
       </Link>
       {!menuIsVisible ? (
         <button

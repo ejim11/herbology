@@ -126,6 +126,10 @@
     .hero-details {
       height: 140vh;
     }
+
+    .home-hero {
+      height: 130vh;
+    }
   }
 
   @media screen and (max-width: 700px) {
