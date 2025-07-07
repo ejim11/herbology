@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useMemo } from "react";
 import appContext from "@/store/appContext";
 import FirstSection from "../FirstSection";
 import { CartItem } from "@/store/appContextProvider";
@@ -22,7 +22,7 @@ const CartComp = () => {
     .map((val) => val.chosenQty * val.price)
     .reduce((acc, cur) => acc + cur, 0);
 
-  const index = Math.floor(Math.random() * 14);
+  const index = useMemo(() => Math.floor(Math.random() * 14), []);
 
   return (
     <main className="flex flex-col w-full">
