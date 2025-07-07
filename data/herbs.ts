@@ -30,11 +30,11 @@ export const herbs: HerbItemType[] = [
     volumesPrices: [
       {
         volume: "500ml",
-        price: 30000,
+        price: 30_000,
       },
       {
         volume: "1.5L",
-        price: 180000,
+        price: 55_000,
       },
     ],
     slug: "FLUXH360-ANTI-INFECTION-SYRUP",
@@ -45,7 +45,7 @@ export const herbs: HerbItemType[] = [
   {
     image: FLUXH360ANTIINFECTIONCAPSULES,
     title: "FLUXH360",
-    name: "ANTI-INFECTION CAPSULES",
+    name: "ANTI-INFECTION CAPSULES (60 Pills)",
     category: HerbCat.TREATMENT,
     description:
       "FLUXH360 Premium Anti-Infection Capsules are premium, handcrafted herbal antibiotics specifically formulated to effectively combat common infections and diseases.  ",
@@ -53,7 +53,7 @@ export const herbs: HerbItemType[] = [
       "FLUXH360 Premium Anti-Infection Capsules are premium, handcrafted herbal antibiotics specifically formulated to effectively combat common infections and diseases. ",
       "This high-quality herbal product is suitable for both men and women, providing comprehensive support for faster recovery. ",
     ],
-    price: 200000,
+    price: 40_000,
     slug: "FLUXH360-ANTI-INFECTION-CAPSULES",
     recommendation: [
       "For chronic or recurrent infections, we recommend using these capsules in combination with our Premium Anti-Infection Syrup to enhance overall effectiveness.",
@@ -62,7 +62,7 @@ export const herbs: HerbItemType[] = [
   {
     image: FLUXH360WOMENSSUPPOSITORYCAPSULESBORIC,
     title: "FLUXH360",
-    name: "WOMEN’S SUPPOSITORY CAPSULES (BORIC)",
+    name: "WOMEN’S SUPPOSITORY CAPSULES (BORIC 20 Pills)",
     category: HerbCat.TREATMENT,
     description:
       "Fluxh360 Women’s Intimate Suppository Capsules are specialized vaginal care products formulated with boric, a naturally occurring mineral that promotes optimal vaginal health.",
@@ -71,12 +71,12 @@ export const herbs: HerbItemType[] = [
       "These capsules effectively restore pH balance and combat common vaginal irritations, including yeast infections and bacterial vaginosis, while alleviating abnormal discharge, odor, and discomfort.",
     ],
     slug: "FLUXH360-WOMENS-SUPPOSITORY-CAPSULES-BORIC",
-    price: 200000,
+    price: 20_000,
   },
   {
     image: FLUXH360DETOXHORMONALTEA,
     title: "FLUXH360",
-    name: "DETOX & HORMONAL TEA",
+    name: "DETOX & HORMONAL TEA (20 Bags)",
     category: HerbCat.TREATMENT,
     description:
       "Fluxh360 Detox & Hormonal Tea is a meticulously crafted blend of herbs, carefully selected to promote overall wellness and support the body's natural detoxification processes.",
@@ -85,7 +85,7 @@ export const herbs: HerbItemType[] = [
       "This powerful herbal infusion combines potent ingredients that work synergistically to cleanse and revitalize the body. ",
     ],
     slug: "FLUXH360-DETOX-HORMONAL-TEA",
-    price: 200000,
+    price: 30_000,
     textList: {
       title: "KEY BENEFITS",
       list: [
@@ -98,7 +98,7 @@ export const herbs: HerbItemType[] = [
   {
     image: INTIMEDWomenSLusciousSweetenerElixir,
     title: "INTIMED",
-    name: "Women's Luscious Sweetener Elixir",
+    name: "Women's Luscious Sweetener Elixir (250ml)",
     category: HerbCat.APHRODISIACS,
     description:
       "Luscious Sweetener Elixir ( Powder) is a premium, luxurious blend designed to enhance intimacy and elevate sensual experiences.",
@@ -107,12 +107,12 @@ export const herbs: HerbItemType[] = [
       "Crafted with high-quality ingredients, this elixir addresses common intimate concerns such as discomfort, low libido, and reduced sensitivity while ensuring smoother, more pleasurable exploration. Embrace the adventure.",
     ],
     slug: "INTIMED-Womens-Luscious-Sweetener-Elixir",
-    price: 300000,
+    price: 30_000,
   },
   {
     image: INTIMEDWomenSLusciousSweetenerSyrup,
     title: "INTIMED",
-    name: "Women's Luscious Sweetener Syrup",
+    name: "Women's Luscious Sweetener Syrup (500ml)",
     category: HerbCat.APHRODISIACS,
     description:
       "Discover a revolutionary formula designed to awaken your deepest desires and elevate your intimate moments. Luscious Sweetener Syrup is expertly crafted to enhance your sensual experience, boosting libido, stamina, and confidence like never before. ",
@@ -122,12 +122,12 @@ export const herbs: HerbItemType[] = [
       "Whether you're seeking to rekindle the flames of passion or explore new heights of pleasure, this syrup empowers you to embrace your most passionate sel",
     ],
     slug: "INTIMED-Womens-Luscious-Sweetener-Syrup",
-    price: 320000,
+    price: 35_000,
   },
   {
     image: INTIMEDPremiumACTIONMANSyrup,
     title: "INTIMED",
-    name: "Premium ACTION MAN Syrup",
+    name: "Premium ACTION MAN Syrup (500ml)",
     category: HerbCat.APHRODISIACS,
     description:
       "Premium ACTION MAN Syrup is an all-natural formula designed to enhance male sexual health by addressing concerns such as premature ejaculation, weak erections, low sperm count, and reduced libido.",
@@ -137,12 +137,12 @@ export const herbs: HerbItemType[] = [
       "Take control of your intimate life and elevate your performance with this ACTION MAN Syrup, your ultimate partner in vitality and confidence",
     ],
     slug: "INTIMED-Premium-ACTION-MAN-Syrup",
-    price: 210000,
+    price: 105_000,
   },
   {
     image: INTIMEDAdvancedWomenSWetnessCapsules,
     title: "INTIMED",
-    name: "Advanced Women’s Wetness Capsules",
+    name: "Advanced Women’s Wetness Capsules (Slippery Elm-30 pills)",
     category: HerbCat.APHRODISIACS,
     description:
       "Enhance intimacy and comfort with our Advanced Women’s Wetness Capsules, designed to support natural lubrication and relieve mild dryness.",
@@ -151,12 +151,12 @@ export const herbs: HerbItemType[] = [
       "Formulated with high-quality, natural ingredients, these capsules promote hydration, balances hormones, and restores confidence for women at every stage of life. This product provides Easy daily solution for improved feminine wellness. It's Simple, safe, and effective.",
     ],
     slug: "INTIMED-Advanced-Womens-Wetness-Capsules",
-    price: 250000,
+    price: 35_000,
   },
   {
     image: RESTOREAdvancedPROBIOTICSGUMMIES,
     title: "RESTORE",
-    name: "Advanced PROBIOTICS GUMMIES",
+    name: "Advanced PROBIOTICS GUMMIES (60 Gummies)",
     category: HerbCat.INTIMATECARE,
     description: `Our Women Natural Probiotics Gummies support overall health by enhancing immune function and gut health.`,
     fullDescription: [
@@ -173,12 +173,12 @@ export const herbs: HerbItemType[] = [
         "Assist in managing PCOS symptoms",
       ],
     },
-    price: 150000,
+    price: 30_000,
   },
   {
     image: RESTOREWomenSContraceptiveTea,
     title: "RESTORE",
-    name: "Women’s Contraceptive Tea",
+    name: "Women’s Contraceptive Tea (20 Bags)",
     category: HerbCat.INTIMATECARE,
     description: "A Gentle, Natural Approach to Pregnancy Prevention",
     fullDescription: [
@@ -187,7 +187,7 @@ export const herbs: HerbItemType[] = [
       "Made with time-honored botanicals traditionally used for their contraceptive properties, this tea offers a holistic alternative to synthetic methods.",
     ],
     slug: "RESTORE-Womens-Contraceptive-Tea",
-    price: 230000,
+    price: 30_000,
     textList: {
       title: "Why Choose RESTORE?",
       list: [
@@ -201,7 +201,7 @@ export const herbs: HerbItemType[] = [
   {
     image: RESTORETHESOUNDWOMANTEA,
     title: "RESTORE",
-    name: "The Sound Woman Tea",
+    name: "The Sound Woman Tea (20 Bags)",
     category: HerbCat.INTIMATECARE,
     description: "Nature's Harmony for Feminine Wellness",
     fullDescription: [
@@ -221,12 +221,12 @@ export const herbs: HerbItemType[] = [
         "Offers support for conditions like PCOS and ovarian cysts.",
       ],
     },
-    price: 200000,
+    price: 30_000,
   },
   {
     image: FLUXH360WOMENSINTIMATEWASH,
     title: "RESTORE",
-    name: "WOMEN’S INTIMATE WASH",
+    name: "WOMEN’S INTIMATE WASH (250ml)",
     category: HerbCat.INTIMATECARE,
     description:
       "FLUXH360 is a luxurious, mild, refreshing, and effective solution, handcrafted with a blend of natural ingredients to maintain optimal genital hygiene.",
@@ -236,12 +236,12 @@ export const herbs: HerbItemType[] = [
       "This amazing product gently cleanses the intimate area without disrupting the skin’s natural balance. The minty infusion provides a cooling sensation, leaving you feeling fresh and confident all day long.",
     ],
     slug: "FLUXH360-WOMENS-INTIMATE-WASH",
-    price: 250000,
+    price: 20_000,
   },
   {
     image: RESTORELuxuryYONIOIL,
     title: "RESTORE",
-    name: "Luxury YONI OIL",
+    name: "Luxury YONI OIL (100ml)",
     category: HerbCat.INTIMATECARE,
     description:
       "Luxury Yoni Oil is expertly formulated from essential natural oils to enhance your intimate care routine. This premium oil effectively prevents dryness, chafing, bumps, and ingrown hairs while soothing irritation after shaving. ",
@@ -250,12 +250,12 @@ export const herbs: HerbItemType[] = [
       "It helps reduce swelling and redness, deeply moisturizes, and calms inflamed skin. Additionally, it provides lasting protection against odor, ensuring comfort and freshness throughout the day. Experience luxurious comfort for your most sensitive areas.",
     ],
     slug: "RESTORE-Luxury-YONI-OIL",
-    price: 230000,
+    price: 20_000,
   },
   {
     image: RESTORELuxuryIntimateSCRUB,
     title: "RESTORE",
-    name: "Luxury Intimate SCRUB",
+    name: "Luxury Intimate SCRUB (250ml)",
     category: HerbCat.INTIMATECARE,
     description:
       "Experience the ultimate in skincare with our Premium Luxury Intimate Scrub, specially designed to target dark intimate areas, thighs, armpits, and chafing. This scrub effectively exfoliates the skin, removing bumps and rashes.",
@@ -264,6 +264,6 @@ export const herbs: HerbItemType[] = [
       "Achieve smooth, fresh, and supple skin with each use, enhancing your confidence and comfort. Indulge in the luxury of rejuvenated intimate skin today!",
     ],
     slug: "RESTORE-Luxury-Intimate-SCRUB",
-    price: 300000,
+    price: 20_000,
   },
 ];
