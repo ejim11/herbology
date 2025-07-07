@@ -137,10 +137,14 @@ const CheckoutForm = () => {
       };
     });
 
+    const totalAmount = items
+      .map((itm) => itm.quantity * (itm.amount ?? 0))
+      .reduce((acc, cur) => acc + cur, 0);
+
     const userDetails = {
       name: `${data.firstName} ${data.lastName}`,
       email: data.email,
-      shippingAddress: `${address}, ${data.lga}, ${data.city}, ${userStateLocation}`,
+      shippingAddress: `${address}, ${userLGALocation}, ${data.city}, ${userStateLocation}`,
     };
 
     const payerStr = `Hello, I want to make a purchase. These are the details: \n\nFullname: ${
@@ -151,9 +155,15 @@ const CheckoutForm = () => {
       .map(
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (item: any) =>
-          `Item: ${item.name}\nAmount: ${item.amount}\nQuantity: ${item.quantity}\n\n`
+          `Item: ${item.name}\nPrice: N${formatAmount(
+            String(item.amount)
+          )}\nQuantity: ${item.quantity}\n\n`
       )
-      .join(`\n`)}`;
+      .join(`\n`)}\nTotal Amount: N${formatAmount(
+      String(totalAmount)
+    )}\nShipping Fee: N${formatAmount(
+      String(stateFee)
+    )}\nGrand Total: N${formatAmount(String(totalAmount + stateFee))}`;
 
     toastSuccess(
       `Redirecting to Whatsapp`,
