@@ -33,15 +33,15 @@ export const footerLinksData: FooterLinkData[] = [
   },
   {
     title: "Contact",
-    texts: ["123 Okpara Avenue, Off Bende Road, Umuahia, Abia State."],
+    // texts: ["123 Okpara Avenue, Off Bende Road, Umuahia, Abia State."],
     links: [
       {
-        text: "08012345678",
-        link: "tel:08012345678",
+        text: " 08141232749",
+        link: "tel: 08141232749",
       },
       {
-        text: "info@herbology.com",
-        link: "mailto:info@herbology.com",
+        text: "info@myherbology.net",
+        link: "mailto:info@myherbology.net",
       },
     ],
   },
