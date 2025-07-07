@@ -1,6 +1,6 @@
 export const sendMessage = (msgStr: string) => {
   // Remove non-numeric characters from phone number
-  const phone = "+2348107171280".replace(/\D/g, "");
+  const phone = "+2349131212512".replace(/\D/g, "");
 
   // Encode the message to handle special characters
   const encodedMessage = encodeURIComponent(msgStr);
