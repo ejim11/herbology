@@ -2,10 +2,10 @@ import React, { ReactNode } from "react";
 import logo from "../assets/logo-light.svg";
 import Image from "next/image";
 import { AiOutlineInstagram } from "react-icons/ai";
-import { FaXTwitter } from "react-icons/fa6";
-import { FiFacebook } from "react-icons/fi";
+import { FaSnapchat, FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import { FooterLinkData, footerLinksData } from "@/data/footerLinkData";
+import { RiTiktokLine } from "react-icons/ri";
 
 const Footer = () => {
   const iconClassname = "w-[1.6rem] h-[1.6rem] text-[rgba(61,90,92,1)]";
@@ -13,15 +13,19 @@ const Footer = () => {
   const mediaLinksData: { icon: ReactNode; link: string }[] = [
     {
       icon: <AiOutlineInstagram className={iconClassname} />,
-      link: "https://www.instagram.com",
+      link: "https://www.instagram.com/_irishstar?igsh=cHJjd29mb3hsMnR2",
     },
     {
       icon: <FaXTwitter className={iconClassname} />,
-      link: "https://www.x.com",
+      link: "https://x.com/myHerbology_?t=8FjbQjkOu-mNBUpYVJTs9g&s=09",
     },
     {
-      icon: <FiFacebook className={iconClassname} />,
-      link: "https://www.facebook.com",
+      icon: <RiTiktokLine />,
+      link: "https://www.tiktok.com/@myherbology?_t=ZM-8xprULrAM5N&_r=1",
+    },
+    {
+      icon: <FaSnapchat />,
+      link: "https://www.snapchat.com/add/myherbology?share_id=WPU-lIfW464&locale=en-US",
     },
   ];
 
@@ -39,7 +43,7 @@ const Footer = () => {
               className="w-full h-full"
             />
           </div>
-          <p className="text-[rgba(216,218,219,1)] text-[0.8rem] font-roboto tracking-[4%] leading-[100%] mt-[0.3rem] ml-[5.4rem] ">
+          <p className="text-[rgba(216,218,219,1)] text-[1rem] font-roboto tracking-[4%] leading-[100%] mt-[0.3rem] ml-[5.4rem] ">
             INTIMATE NATURAL WELLNESS
           </p>
           <div className="mt-[3.2rem] flex">
