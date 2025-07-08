@@ -9,14 +9,14 @@ import HerbItem from "./HerbItem";
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
 
 const sliderBtnClassnName =
-  "bg-secondary-2 flex items-center  -top-[11rem]  justify-center w-[4.2rem] h-[4.2rem] rounded-[0.8rem] absolute  z-20     hover:bg-[rgba(27,61,63,0.5)] cursor-pointer transition-all duration-150 ease-in max-smd:hidden";
+  "bg-secondary-2 flex items-center  top-[25rem]  justify-center w-[8rem] h-[8rem] rounded-full absolute  z-20     hover:bg-[rgba(27,61,63,0.5)] cursor-pointer transition-all duration-150 ease-in max-smd:hidden";
 
 function NextArrow(props: any) {
   const { onClick } = props;
   return (
     <button
       onClick={onClick}
-      className={`${sliderBtnClassnName} right-[8rem]  `}
+      className={`${sliderBtnClassnName} right-[3rem]  `}
     >
       <GoChevronRight className="text-white w-[2.8rem] h-[2.8rem]" />
     </button>
@@ -26,10 +26,7 @@ function NextArrow(props: any) {
 function PrevArrow(props: any) {
   const { onClick } = props;
   return (
-    <button
-      className={`${sliderBtnClassnName} right-[17rem]`}
-      onClick={onClick}
-    >
+    <button className={`${sliderBtnClassnName} left-[1rem]`} onClick={onClick}>
       <GoChevronLeft className="text-white w-[2.8rem] h-[2.8rem]" />
     </button>
   );
@@ -78,7 +75,7 @@ const ProductsSlides = ({
   };
 
   return (
-    <section className="pl-[8rem] pt-[12rem] max-md:pt-[8rem]  max-xl:pl-[5rem] max-lg:pl-[3rem] max-md:pl-[2rem] ">
+    <section className="pl-[8rem] pr-[6rem] pt-[12rem] max-md:pt-[8rem]  max-xl:pl-[5rem] max-lg:pl-[3rem] max-md:pl-[2rem] ">
       <div className="mr-[2rem]">
         <div className="max-smd:text-center">
           <h3 className="text-[4.8rem] max-lg:text-[3.5rem] max-smd:text-[3rem] font-cambon text-primary-1 mb-[1rem]">
