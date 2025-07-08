@@ -59,6 +59,9 @@ const Header = () => {
     >
       <div className="w-[26rem]">
         <Image src={logo} alt="logo image" priority className="w-full h-full" />
+        <p className="text-[1rem] text-primary-1 ml-[5.4rem]">
+          INTIMATE NATURAL WELLNESS
+        </p>
       </div>
       <nav
         className={`max-sm:fixed max-sm:top-[8rem] max-sm:bottom-0 max-sm:right-0 max-sm:left-0 max-sm:h-screen max-sm:w-full max-sm:bg-[rgba(0,0,0,0.7)] max-sm:z-[100] max-sm:transition-all max-sm:duration-300 max-sm:ease-linear ml-auto mr-[5rem] max-smd:mr-[3rem] max-sm:mr-0 ${
