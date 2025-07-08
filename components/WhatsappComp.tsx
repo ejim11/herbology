@@ -7,6 +7,7 @@ const WhatsappComp = () => {
     <FloatingWhatsApp
       phoneNumber={"+2349131212512"}
       accountName={"Herbology"}
+      avatar="https://nich-fashion.s3.us-east-2.amazonaws.com/alex-starnes-PK_t0Lrh7MM-unsplash.jpg"
     />
   );
 };
