@@ -9,7 +9,7 @@ import HerbItem from "./HerbItem";
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
 
 const sliderBtnClassnName =
-  "bg-secondary-2 flex items-center  top-[25rem]  justify-center w-[8rem] h-[8rem] rounded-full absolute  z-20     hover:bg-[rgba(27,61,63,0.5)] cursor-pointer transition-all duration-150 ease-in max-smd:hidden";
+  "bg-white flex items-center  top-[20rem]  justify-center w-[8rem] h-[8rem] rounded-full absolute  z-20     hover:bg-[rgba(27,61,63,1)] cursor-pointer text-secondary-2  hover:text-white transition-all duration-150 ease-in max-smd:hidden";
 
 function NextArrow(props: any) {
   const { onClick } = props;
@@ -18,7 +18,7 @@ function NextArrow(props: any) {
       onClick={onClick}
       className={`${sliderBtnClassnName} right-[3rem]  `}
     >
-      <GoChevronRight className="text-white w-[2.8rem] h-[2.8rem]" />
+      <GoChevronRight className="text-current w-[2.8rem] h-[2.8rem]" />
     </button>
   );
 }
@@ -27,7 +27,7 @@ function PrevArrow(props: any) {
   const { onClick } = props;
   return (
     <button className={`${sliderBtnClassnName} left-[1rem]`} onClick={onClick}>
-      <GoChevronLeft className="text-white w-[2.8rem] h-[2.8rem]" />
+      <GoChevronLeft className="text-current w-[2.8rem] h-[2.8rem]" />
     </button>
   );
 }

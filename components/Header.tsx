@@ -59,7 +59,7 @@ const Header = () => {
     >
       <div className="w-[26rem]">
         <Image src={logo} alt="logo image" priority className="w-full h-full" />
-        <p className="text-[1rem] text-primary-1 ml-[5.4rem]">
+        <p className="text-[1rem] text-secondary-2 font-roboto ml-[5.4rem]">
           INTIMATE NATURAL WELLNESS
         </p>
       </div>
