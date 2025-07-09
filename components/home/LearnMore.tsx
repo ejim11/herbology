@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import learnMoreImg from "../../assets/home/learn-more.png";
 import learnMoreImg2 from "../../assets/home/learn-more-mobile.png";
-import Link from "next/link";
+// import Link from "next/link";
 
 const LearnMore = () => {
   return (
@@ -34,12 +34,12 @@ const LearnMore = () => {
         infections, enhance libido with aphrodisiacs, and nourish your body with
         wellness supplements.
       </p>
-      <Link
+      {/* <Link
         href={"/"}
         className="bg-[rgba(255,127,80,1)] py-[1.8rem] px-[3.2rem] rounded-[1.6rem] mt-[2.4rem] text-white font-roboto"
       >
         Learn more
-      </Link>
+      </Link> */}
     </div>
   );
 };
