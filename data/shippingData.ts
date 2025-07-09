@@ -66,7 +66,7 @@ export const shippingData: {
     header: "Contact Us",
     subHeader: "For any questions about your order or this Shipping Policy:",
     texts: [
-      "Contact us via WhatsApp at 08012345678. We aim to respond within 24 hours, excluding weekends and public holidays.",
+      "Contact us via WhatsApp at +2349131212512. We aim to respond within 24 hours, excluding weekends and public holidays.",
     ],
     endText:
       "We appreciate your trust in Herbology and are committed to delivering your order promptly and securely.",

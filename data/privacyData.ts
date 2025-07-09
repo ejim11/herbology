@@ -95,6 +95,6 @@ export const privacyData: {
   {
     header: "Contact Us",
     subHeader:
-      "For questions or to exercise your GDPR rights, contact us via WhatsApp at 08012345678.",
+      "For questions or to exercise your GDPR rights, contact us via WhatsApp at +2349131212512.",
   },
 ];
