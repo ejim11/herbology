@@ -9,7 +9,7 @@ import HerbItem from "./HerbItem";
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
 
 const sliderBtnClassnName =
-  "bg-white flex items-center  top-[20rem]  justify-center w-[8rem] h-[8rem] rounded-full absolute  z-20     hover:bg-[rgba(27,61,63,1)] cursor-pointer text-secondary-2  hover:text-white transition-all duration-150 ease-in max-smd:hidden";
+  "bg-[rgba(255,127,80,1)] flex items-center  top-[20rem]  justify-center w-[8rem] h-[8rem] rounded-full absolute  z-20     hover:bg-[rgba(27,61,63,1)] cursor-pointer text-white  hover:text-white transition-all duration-150 ease-in max-smd:hidden";
 
 function NextArrow(props: any) {
   const { onClick } = props;
@@ -18,7 +18,7 @@ function NextArrow(props: any) {
       onClick={onClick}
       className={`${sliderBtnClassnName} right-[3rem]  `}
     >
-      <GoChevronRight className="text-current w-[2.8rem] h-[2.8rem]" />
+      <GoChevronRight className="text-current w-[3rem] h-[3rem]" />
     </button>
   );
 }
@@ -27,7 +27,7 @@ function PrevArrow(props: any) {
   const { onClick } = props;
   return (
     <button className={`${sliderBtnClassnName} left-[1rem]`} onClick={onClick}>
-      <GoChevronLeft className="text-current w-[2.8rem] h-[2.8rem]" />
+      <GoChevronLeft className="text-current w-[3rem] h-[3rem]" />
     </button>
   );
 }
@@ -75,7 +75,7 @@ const ProductsSlides = ({
   };
 
   return (
-    <section className="pl-[8rem] pr-[6rem] pt-[12rem] max-md:pt-[8rem]  max-xl:pl-[5rem] max-lg:pl-[3rem] max-md:pl-[2rem] ">
+    <section className="pl-[8rem] pr-[6rem] pt-[12rem] max-md:pt-[8rem]  max-xl:pl-[5rem] max-lg:pl-[3rem] max-md:pl-[2rem] max-xl:pr-[5rem] max-lg:pr-[3rem] max-md:pr-[2rem] ">
       <div className="mr-[2rem]">
         <div className="max-smd:text-center">
           <h3 className="text-[4.8rem] max-lg:text-[3.5rem] max-smd:text-[3rem] font-cambon text-primary-1 mb-[1rem]">
@@ -109,7 +109,7 @@ const ProductsSlides = ({
       </div>
       <div className="hidden max-sm:flex flex-nowrap overflow-x-auto mt-[4.8rem]">
         {products.map((herb: HerbItemType) => (
-          <div key={herb.name} className="shrink-0 w-[35rem] pr-[3rem] ">
+          <div key={herb.name} className="shrink-0 w-[40rem] pr-[3rem] ">
             <HerbItem
               image={herb.image}
               name={herb.name}
